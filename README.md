@@ -3,8 +3,9 @@
 To run code from this repository, follow these steps:  
 **1. Download the repository**  
 Clone this repository to your local computer using the **git clone** command:  
+'''markdown  
 git clone https://github.com/SzczypekJ/Remitly.git  
-  
+'''    
 **2. Go to the project directory**  
 Navigate to the directory that contains the downloaded repository:  
 cd folder_name  
