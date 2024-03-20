@@ -68,6 +68,12 @@ class UnitTestForFunction(unittest.TestCase):
             result = check_json_file(self.json_file_path)
             self.assertFalse(result)
 
+    # Test for JSON data with resource that contain two asterisk
+    def test_multiple_asterisk(self):
+        with patch('builtins.open', mock_open(read_data='{"PolicyDocument": {"Statement": [{"Resource": "**"}]}}')):
+            result = check_json_file(self.json_file_path)
+            self.assertTrue(result)
+
 
 if __name__ == '__main__':
     unittest.main()
